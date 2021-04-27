@@ -4,12 +4,37 @@
   box-sizing: border-box;
 }
 
+:root{
+  --cyan-green: #65dfc9;
+  --cyan: #6cdbeb;
+  --white: #fff;
+  --gray-light: rgba(255, 255, 255, 0.7);
+  --gray-middle:  rgba(255, 255, 255, 0.3);
+  --gray: #4d5156;
+}
+
 body {
   height: 100vh;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  background: linear-gradient(to right top, var(--cyan-green), var(--cyan));
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: 400;
   font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+@mixin glass($width,  $height: 10rem, $display: flex, $text: left) {
+    width: $width;
+    height: $height;
+    background: linear-gradient(to right bottom, var(--gray-light), var(--gray-middle));
+    border-radius: 0.3rem;
+    backdrop-filter: blur(2rem);
+    padding: 0.5rem;
+    display: $display;
+    gap: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color:  var(--gray);
+    text-align: $text;
 }

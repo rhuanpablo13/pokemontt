@@ -1,3 +1,4 @@
+@import '../../../styles.scss';
 
 .wrapper {
   display: grid;
@@ -7,16 +8,11 @@
 
 
   .glass {
-    width: 18rem;
-    height: 10rem;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-    border-radius: 0.3rem;
-    backdrop-filter: blur(2rem);
-    padding: 0.5rem;
-    display: flex;
-    gap: 1rem;
-    cursor: pointer;
+    @include glass(18rem, 10rem);
 
+    .glass-description{
+      margin-top: 10%;
+    }
 
     img {
       height: 100%;

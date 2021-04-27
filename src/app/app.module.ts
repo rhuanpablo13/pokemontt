@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { GlassComponent } from './components/glass/glass.component';
-import { LazyLoadImageModule } from 'ng-lazyload-image'; 
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { PokemonComponent } from './pages/pokemon/pokemon.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    GlassComponent
+    GlassComponent,
+    PokemonComponent
   ],
   imports: [
     BrowserModule,
