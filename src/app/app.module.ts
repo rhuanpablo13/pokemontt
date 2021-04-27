@@ -10,12 +10,15 @@ import { GlassComponent } from './components/glass/glass.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { PokemonComponent } from './pages/pokemon/pokemon.component'; 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GlassComponent,
-    PokemonComponent
+    PokemonComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +26,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     LazyLoadImageModule,
     FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [], 

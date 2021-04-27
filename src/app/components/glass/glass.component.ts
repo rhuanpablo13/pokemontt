@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import {Pokemon} from '../../models/pokemon';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-glass',
@@ -9,11 +8,10 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./glass.component.scss']
 })
 export class GlassComponent implements OnInit {
-  faSearch = faSearch;
   pokemons: Array<Pokemon>;
-
+ 
   constructor(
-    private pokemonService: PokemonService
+    private pokemonService: PokemonService,
   ) { }
 
   ngOnInit(): void {
@@ -24,6 +22,13 @@ export class GlassComponent implements OnInit {
 
       this.pokemons = response.data
     });
-
   }
+
+  onSubmit(name): void{
+    this.pokemonService.getListPokemon(name).subscribe((response) => {
+      console.log(response);
+      
+      this.pokemons = response.data
+    });
+  };
 }

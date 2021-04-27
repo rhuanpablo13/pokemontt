@@ -1,8 +1,5 @@
 <div class="container">
-  <form action="">
-    <input type="text" placeholder="Buscar Pokemon">
-    <fa-icon [icon]="faSearch"></fa-icon>
-  </form>
+ <app-search (onSubmit)="onSubmit($event)"></app-search>
   <div class="wrapper">
     <a [routerLink]="['/pokemon']" [queryParams]="{ id: pokemon.id}" *ngFor="let pokemon of pokemons" class="glass">
       <img [lazyLoad]="pokemon.images.small" >

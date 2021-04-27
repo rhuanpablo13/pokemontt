@@ -9,11 +9,13 @@ import { Pokemon } from '../models/pokemon'
 export class PokemonService {
   constructor(private http: HttpClient) {}
 
-  getListPokemon() {
-    return this.http.get(`${environment.API_PATH}cards`);
+  getListPokemon($name = null) {
+    if ($name) return this.http.get(`${environment.API_PATH}cards?q=name:${$name}*`);
+      
+    return this.http.get(`${environment.API_PATH}cards?orderBy:name`);
   }
 
-    getPokemon(id: string) {
-    return this.http.get(`${environment.API_PATH}cards/${id}`);
+    getPokemon($id: string) {
+    return this.http.get(`${environment.API_PATH}cards/${$id}`);
   }
 }
