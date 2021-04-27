@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/architect": "^0.1001.7",
     "@angular/animations": "~9.0.0-rc.0",
     "@angular/common": "~9.0.0-rc.0",
     "@angular/compiler": "~9.0.0-rc.0",
@@ -19,8 +20,10 @@
     "@angular/forms": "~9.0.0-rc.0",
     "@angular/platform-browser": "~9.0.0-rc.0",
     "@angular/platform-browser-dynamic": "~9.0.0-rc.0",
+    "@angular/pwa": "^0.1102.10",
     "@angular/router": "~9.0.0-rc.0",
     "@angular/service-worker": "~9.0.0-rc.0",
+    "ng-lazyload-image": "^9.1.0",
     "rxjs": "~6.5.3",
     "sass": "^1.32.11",
     "tslib": "^1.10.0",

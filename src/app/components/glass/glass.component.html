@@ -1,4 +1,10 @@
-<main class="main">
-  <section class="glass">
-  </section>
-</main>
+<div class="wrapper">
+  <div *ngFor="let pokemon of pokemons" class="glass">
+    <img [lazyLoad]="pokemon.images.small" >
+        <div class="description">
+            <h5>ID: {{pokemon.id}} </h5>
+            <h5>Name: {{pokemon.name}} </h5>
+            <h5>Tipo(s): {{pokemon.types}} </h5>
+        </div>
+    </div>
+</div>
