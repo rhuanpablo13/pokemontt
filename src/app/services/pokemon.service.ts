@@ -10,12 +10,12 @@ export class PokemonService {
   constructor(private http: HttpClient) {}
 
   getListPokemon($name = null) {
-    if ($name) return this.http.get(`${environment.API_PATH}cards?q=name:${$name}*`);
+    if ($name) return this.http.get<Pokemon[]>(`${environment.API_PATH}cards?q=name:${$name}*`);
       
-    return this.http.get(`${environment.API_PATH}cards?orderBy:name`);
+    return this.http.get<Pokemon[]>(`${environment.API_PATH}cards?orderBy=name`);
   }
 
     getPokemon($id: string) {
-    return this.http.get(`${environment.API_PATH}cards/${$id}`);
+    return this.http.get<Pokemon>(`${environment.API_PATH}cards/${$id}`);
   }
 }

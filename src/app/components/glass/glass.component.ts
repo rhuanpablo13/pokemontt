@@ -16,18 +16,12 @@ export class GlassComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemonService.getListPokemon().subscribe((response) => {
-      response.data.sort(function(a,b) {
-          return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-      });
-
       this.pokemons = response.data
     });
   }
 
   onSubmit(name): void{
     this.pokemonService.getListPokemon(name).subscribe((response) => {
-      console.log(response);
-      
       this.pokemons = response.data
     });
   };
