@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { GlassComponent } from './components/glass/glass.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { PokemonComponent } from './pages/pokemon/pokemon.component'; 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PokemonComponent } from './pages/pokemon/pokemon.component';
     AppRoutingModule,
     HttpClientModule,
     LazyLoadImageModule,
+    FontAwesomeModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [], 
