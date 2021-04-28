@@ -12,13 +12,16 @@ import { PokemonComponent } from './pages/pokemon/pokemon.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GlassComponent,
     PokemonComponent,
-    SearchComponent
+    SearchComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { SearchComponent } from './components/search/search.component';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [], 

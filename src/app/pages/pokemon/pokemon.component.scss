@@ -11,6 +11,7 @@
 
   .glass {
     @include glass(40%, column, auto, center);
+    cursor: default;
 
     h1 {
       margin-bottom: 0.5em;
@@ -23,6 +24,7 @@
 
       .glass-description{
         @include glass(auto, column, auto, center);
+        cursor: default;
        }
 
        table {
@@ -35,6 +37,12 @@
 
       td{
         padding: 0.5rem;
+      }
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
       }
     }
   }
