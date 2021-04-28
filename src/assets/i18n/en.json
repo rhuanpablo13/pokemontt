@@ -1,0 +1,13 @@
+{
+  "SEARCH_POKEMON": "Search Pokemon",
+  "NAME": "Name",
+  "TYPE": "Type(s)",
+  "DESCRIPTION": "Description",
+  "RESISTANCE": "Resistance",
+  "WEAKNESS": "Weaknes(s)",
+  "ATTACK": "Attack(s)",
+  "COST": "Cost(manna)",
+  "DAMAGE": "Damage",
+  "ID": "ID",
+  "OK": "OK"
+}

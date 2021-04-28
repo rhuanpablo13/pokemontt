@@ -4,9 +4,9 @@
     <a [routerLink]="['/pokemon']" [queryParams]="{ id: pokemon.id}" *ngFor="let pokemon of pokemons" class="glass">
       <img [lazyLoad]="pokemon.images.small" >
           <div class="glass-description">
-              <h5>ID: {{pokemon.id}} </h5>
-              <h5>Name: {{pokemon.name}} </h5>
-              <h5>Tipo(s): {{pokemon.types}} </h5>
+              <h5>{{'ID' | translate}}: {{pokemon.id}} </h5>
+              <h5>{{'NAME' | translate}}: {{pokemon.name}} </h5>
+              <h5>{{'TYPE' | translate}}: {{pokemon.types}} </h5>
           </div>
       </a>
     </div>

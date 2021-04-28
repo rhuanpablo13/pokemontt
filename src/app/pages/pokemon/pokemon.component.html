@@ -6,20 +6,20 @@
 
       <div class="description">
         <div class="glass-description">
-          <h3>Description</h3>
+          <h3>{{'DESCRIPTION' | translate}}</h3>
             <table>
             <tr>
-              <td>Id</td>
+              <td>{{'ID' | translate}}</td>
               <td>{{pokemon.id}}</td>
             </tr>
             <tr>
-              <td>Tipo(s)</td>
+              <td>{{'TYPE' | translate}}</td>
               <td>{{pokemon.type}}</td>
             </tr>
           </table>
         </div>
           <div class="glass-description">
-            <h3>Resistencia(s)</h3>
+            <h3>{{'RESISTANCE' | translate}}</h3>
             <table>
               <tr *ngFor="let r of pokemon.resistances">
                 <td>{{r.type}}</td>
@@ -28,7 +28,7 @@
           </table>
         </div>
         <div class="glass-description">
-            <h3>Fraqueza(s)</h3>
+            <h3>{{'WEAKNESS' | translate}}</h3>
             <table>
               <tr *ngFor="let r of pokemon.weaknesses">
                 <td>{{r.type}}</td>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="glass-description">
-            <h3>Attack(s)</h3>
+            <h3>{{'ATTACK' | translate}}</h3>
             <table>
               <tr *ngFor="let attack of pokemon.attacks">
                 <button type="button" (click)="open(mymodal, attack)">
@@ -59,25 +59,25 @@
     <div class="modal-body">
       <table>
         <tr >
-          <td>Name</td>
+          <td>{{'NAME' | translate}}</td>
           <td>{{attack.name}}</td>
         </tr>
         <tr >
-          <td>Custo (mana)</td>
+          <td>{{'COST' | translate}}</td>
           <td>{{attack.cost}}</td>
        </tr>
         <tr >
-          <td>Dano</td>
+          <td>{{'DAMAGE' | translate}}</td>
           <td>{{attack.damage}}</td>
        </tr>
         <tr >
-          <td>Descrição</td>
+          <td>{{'DESCRIPTION' | translate}}</td>
           <td>{{attack.text}}</td>
         </tr>
       </table>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">{{'OK' | translate}}</button>
     </div>
   </ng-template>
 </div>
