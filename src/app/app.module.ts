@@ -13,7 +13,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ModalComponent } from './components/modal/modal.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
@@ -26,7 +25,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     GlassComponent,
     PokemonComponent,
     SearchComponent,
-    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +34,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

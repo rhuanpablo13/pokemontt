@@ -40,16 +40,17 @@
         <div class="glass-description">
             <h3>{{'ATTACK' | translate}}</h3>
             <table>
-              <tr *ngFor="let attack of pokemon.attacks">
-                <button type="button" (click)="open(mymodal, attack)">
-                    {{attack.name}}
+              <tr *ngFor="let _attack of pokemon.attacks">
+                <button type="button" (click)="open(mymodal, _attack)">
+                    {{_attack.name}}
                 </button>
               </tr>
           </table>
         </div>
       </div>
   </div>
-  <ng-template #mymodal let-modal>
+
+  <ng-template #mymodal let-modal >
     <div class="modal-header">
       <h4 class="modal-title" id="modal-basic-title">{{attack.name}}</h4>
       <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -59,25 +60,22 @@
     <div class="modal-body">
       <table>
         <tr >
-          <td>{{'NAME' | translate}}</td>
+          <td class="modal-td">{{'NAME' | translate}}</td>
           <td>{{attack.name}}</td>
         </tr>
         <tr >
-          <td>{{'COST' | translate}}</td>
+          <td class="modal-td">{{'COST' | translate}}</td>
           <td>{{attack.cost}}</td>
        </tr>
         <tr >
-          <td>{{'DAMAGE' | translate}}</td>
+          <td class="modal-td">{{'DAMAGE' | translate}}</td>
           <td>{{attack.damage}}</td>
        </tr>
         <tr >
-          <td>{{'DESCRIPTION' | translate}}</td>
+          <td class="modal-td">{{'DESCRIPTION' | translate}}</td>
           <td>{{attack.text}}</td>
         </tr>
       </table>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">{{'OK' | translate}}</button>
     </div>
   </ng-template>
 </div>

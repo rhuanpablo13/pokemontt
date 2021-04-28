@@ -11,6 +11,7 @@
   --gray-light: rgba(255, 255, 255, 0.7);
   --gray-middle:  rgba(255, 255, 255, 0.3);
   --gray: #4d5156;
+  --gray-middle-default: #dee2e6;
 }
 
 body {
@@ -38,3 +39,32 @@ h1,h2,h3,h4,h5,h6 {
     color:  var(--gray);
     text-align: $text;
 }
+
+.modal-content {
+    font-size: 0.8rem;
+    color: var(--gray);
+    text-align: center;
+    background-color: var(--gray-middle);
+    padding: 1rem !important;
+    align-items: center;
+
+    .modal-header{
+      margin-bottom: 1rem;
+      border-bottom: none;
+      width: 90%;
+
+      .close {
+        margin-left: auto;
+      }
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--gray-middle-default);
+    }
+
+    td, th {
+      border: 1px solid var(--gray-middle-default);
+      text-align: left;
+      padding: 8px;
+    }
+  }
