@@ -40,7 +40,20 @@ h1,h2,h3,h4,h5,h6 {
     text-align: $text;
 }
 
+  @mixin table-child() {
+    tr:nth-child(even) {
+      background-color: var(--gray-middle-default);
+    }
+
+    td, th {
+      border: 1px solid var(--gray-middle-default);
+      text-align: left;
+      padding: 8px;
+    }
+  }
+
 .modal-content {
+    width: 100%;
     font-size: 0.8rem;
     color: var(--gray);
     text-align: center;
@@ -58,13 +71,14 @@ h1,h2,h3,h4,h5,h6 {
       }
     }
 
-    tr:nth-child(even) {
-      background-color: var(--gray-middle-default);
+    .modal-body {
+      width: 100%;
+
+      table {
+        width: 100%;
+      }
     }
 
-    td, th {
-      border: 1px solid var(--gray-middle-default);
-      text-align: left;
-      padding: 8px;
-    }
+    @include table-child();
   }
+

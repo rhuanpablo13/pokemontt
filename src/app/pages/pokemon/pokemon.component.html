@@ -14,7 +14,7 @@
             </tr>
             <tr>
               <td>{{'TYPE' | translate}}</td>
-              <td>{{pokemon.type}}</td>
+              <td>{{pokemon.types}}</td>
             </tr>
           </table>
         </div>
@@ -40,10 +40,8 @@
         <div class="glass-description">
             <h3>{{'ATTACK' | translate}}</h3>
             <table>
-              <tr *ngFor="let _attack of pokemon.attacks">
-                <button type="button" (click)="open(mymodal, _attack)">
-                    {{_attack.name}}
-                </button>
+              <tr class="attack" *ngFor="let _attack of pokemon.attacks"  (click)="open(mymodal, _attack)">
+                {{_attack.name}} +
               </tr>
           </table>
         </div>
