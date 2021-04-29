@@ -1,12 +1,12 @@
 <div class="wrapper">
-    <img [lazyLoad]="pokemon.images.small" >
+    <img [lazyLoad]="pokemon.images.small" id="img-pokemon" [useSrcset]="true">
 
   <div class="glass">
-      <h1>{{pokemon.name}}</h1>
+      <h1 id="txt-name-pokemon">{{pokemon.name}}</h1>
 
       <div class="description">
-        <div class="glass-description">
-          <h3>{{'DESCRIPTION' | translate}}</h3>
+        <div class="glass-description" >
+          <h3 id="txt-description-pokemon">{{'DESCRIPTION' | translate}}</h3>
             <table>
             <tr>
               <td>{{'ID' | translate}}</td>
@@ -19,7 +19,7 @@
           </table>
         </div>
           <div class="glass-description">
-            <h3>{{'RESISTANCE' | translate}}</h3>
+            <h3 id="txt-resistance-pokemon">{{'RESISTANCE' | translate}}</h3>
             <table>
               <tr *ngFor="let r of pokemon.resistances">
                 <td>{{r.type}}</td>
@@ -28,7 +28,7 @@
           </table>
         </div>
         <div class="glass-description">
-            <h3>{{'WEAKNESS' | translate}}</h3>
+            <h3 id="txt-weakness-pokemon">{{'WEAKNESS' | translate}}</h3>
             <table>
               <tr *ngFor="let r of pokemon.weaknesses">
                 <td>{{r.type}}</td>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="glass-description">
-            <h3>{{'ATTACK' | translate}}</h3>
+            <h3 id="txt-attack-pokemon">{{'ATTACK' | translate}}</h3>
             <table>
               <tr class="attack" *ngFor="let _attack of pokemon.attacks"  (click)="open(mymodal, _attack)">
                 {{_attack.name}} +

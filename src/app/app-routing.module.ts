@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PokemonComponent} from './pages/pokemon/pokemon.component'
 import { PokemonsComponent } from './pages/pokemons/pokemons.component'
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', component: PokemonsComponent },
   { path: 'pokemon', component: PokemonComponent},
   { path: '',   redirectTo: '/', pathMatch: 'full' }
