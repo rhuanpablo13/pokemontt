@@ -3,11 +3,11 @@ import { PokemonService } from '../../services/pokemon.service';
 import {Pokemon} from '../../models/pokemon';
 
 @Component({
-  selector: 'app-glass',
-  templateUrl: './glass.component.html',
-  styleUrls: ['./glass.component.scss']
+  selector: 'app-pokemons',
+  templateUrl: './pokemons.component.html',
+  styleUrls: ['./pokemons.component.scss']
 })
-export class GlassComponent implements OnInit {
+export class PokemonsComponent implements OnInit {
   pokemons: Array<Pokemon>;
  
   constructor(
@@ -15,13 +15,13 @@ export class GlassComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.pokemonService.getListPokemon().subscribe((response) => {
+    this.pokemonService.getListPokemon().subscribe((response: any) => {
       this.pokemons = response.data
     });
   }
 
-  onSubmit(name): void{
-    this.pokemonService.getListPokemon(name).subscribe((response) => {
+  onSubmit(name: string): void{
+    this.pokemonService.getListPokemon(name).subscribe((response: any) => {
       this.pokemons = response.data
     });
   };

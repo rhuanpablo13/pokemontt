@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { GlassComponent } from './components/glass/glass.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { PokemonComponent } from './pages/pokemon/pokemon.component'; 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -15,6 +14,7 @@ import { SearchComponent } from './components/search/search.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { PokemonsComponent } from './pages/pokemons/pokemons.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http)
@@ -22,9 +22,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    GlassComponent,
     PokemonComponent,
     SearchComponent,
+    PokemonsComponent,
   ],
   imports: [
     BrowserModule,

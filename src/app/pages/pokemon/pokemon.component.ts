@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Pokemon } from 'src/app/models/pokemon';
+import { Attacks, Pokemon } from 'src/app/models/pokemon';
 import { PokemonService } from '../../services/pokemon.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
@@ -11,9 +11,9 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class PokemonComponent implements OnInit {
 
-  pokemon:  Pokemon;
+  pokemon: Pokemon;
   title = 'appBootstrap';
-  attack: object;
+  attack: Attacks;
   
   closeResult: string;
 
@@ -25,11 +25,8 @@ export class PokemonComponent implements OnInit {
 
   ngOnInit(){
     const id = this.route.snapshot.queryParams.id;
-    console.log(this.route.snapshot);
-    this.pokemonService.getPokemon(id).subscribe((response)=> {
-      console.log(response.data);
-      
-      this.pokemon = response.data
+    this.pokemonService.getPokemon(id).subscribe((response: any)=> {
+      this.pokemon = response.data;
     })
   }
 

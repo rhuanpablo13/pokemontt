@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Pokemon } from '../models/pokemon'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,13 +10,13 @@ import { Pokemon } from '../models/pokemon'
 export class PokemonService {
   constructor(private http: HttpClient) {}
 
-  getListPokemon($name = null) {
+  getListPokemon($name = null): Observable<Pokemon[]>{
     if ($name) return this.http.get<Pokemon[]>(`${environment.API_PATH}cards?q=name:${$name}*`);
       
     return this.http.get<Pokemon[]>(`${environment.API_PATH}cards?orderBy=name`);
   }
 
-    getPokemon($id: string) {
-    return this.http.get<Pokemon>(`${environment.API_PATH}cards/${$id}`);
+    getPokemon($id: string){
+    return this.http.get(`${environment.API_PATH}cards/${$id}`);
   }
 }
