@@ -1,8 +1,8 @@
 <div class="container">
- <app-search (onSubmit)="onSubmit($event)"></app-search>
-  <div class="wrapper">
-    <a [routerLink]="['/pokemon']" [queryParams]="{ id: pokemon.id}" *ngFor="let pokemon of pokemons" class="glass">
-      <img [lazyLoad]="pokemon.images.small" >
+ <app-search id="inp-search-pokemons"(onSubmit)="onSubmit($event)"></app-search>
+  <div class="wrapper" >
+    <a [routerLink]="['/pokemon']" [queryParams]="{ id: pokemon.id}" *ngFor="let pokemon of pokemons" class="glass" id="lnk-pokemons">
+      <img [lazyLoad]="pokemon.images.small" class="img-pokemon-pokemons">
           <div class="glass-description">
               <h5>{{'ID' | translate}}: {{pokemon.id}} </h5>
               <h5>{{'NAME' | translate}}: {{pokemon.name}} </h5>

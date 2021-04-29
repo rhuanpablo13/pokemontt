@@ -1,4 +1,4 @@
-<form  (ngSubmit)="_onsubmit()" >
-  <input [formControl]="name" type="text" placeholder="{{'SEARCH_POKEMON' | translate}}">
-  <button type="submit"><fa-icon [icon]="faSearch" type="submit"></fa-icon></button>
+<form  (ngSubmit)="_onsubmit()"  id="form-search">
+  <input [formControl]="name" type="text" placeholder="{{'SEARCH_POKEMON' | translate}}"  id="inp-search">
+  <button type="submit"  id="btn-search"><fa-icon [icon]="faSearch" type="submit"  id="icn-search"></fa-icon></button>
 </form>
