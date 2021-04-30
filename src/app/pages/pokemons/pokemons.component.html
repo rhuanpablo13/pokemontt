@@ -2,7 +2,7 @@
  <app-search (onSubmit)="onSubmit($event)"></app-search>
   <ol  id="list-pokemon" class="wrapper ">
     <li  [routerLink]="['/pokemon']" [queryParams]="{ id: pokemon.id}" *ngFor="let pokemon of pokemons" class="glass">
-    <img [lazyLoad]="pokemon.images.small" class="img-pokemon-pokemons">
+    <img [lazyLoad]="pokemon.images.large" class="img-pokemon-pokemons">
         <div class="glass-description">
             <h5>{{'ID' | translate}}: {{pokemon.id}} </h5>
             <h5>{{'NAME' | translate}}: {{pokemon.name}} </h5>
@@ -11,9 +11,9 @@
     </li>
   </ol>
   <owl-carousel-o [options]="customOptions" class="container-mobile">
-    <ng-container *ngFor="let pokemon of [1, 2, 3, 4, 4, 6]">
-      <ng-template carouselSlide [id]="pokemon.id">
-        <img [src]="'/assets/img/card-test.png'" [alt]="'djjfsd,bfmhsbh'" [title]="'dhakshdkuhdk'">
+    <ng-container *ngFor="let pokemon of pokemons">
+      <ng-template carouselSlide [id]="pokemon.id" >
+        <img [src]="pokemon.images.large" [alt]="pokemon.name" [title]="pokemon.name" [routerLink]="['/pokemon']" [queryParams]="{ id: pokemon.id}">
       </ng-template>
     </ng-container>
   </owl-carousel-o>

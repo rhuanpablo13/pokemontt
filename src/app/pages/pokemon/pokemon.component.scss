@@ -31,11 +31,11 @@
         @include glass(auto, column, auto, center);
         cursor: default;
 
-         @include table-child();
+        @include table-child();
 
-       }
+      }
 
-       table {
+      table {
         width: 100%;
         margin-top: 1rem;
 
@@ -45,6 +45,26 @@
           &:hover {
             filter: brightness(0.9);
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    display: block;
+    text-align: center;
+    
+    .glass {
+      margin-top: 1rem; 
+      width: 100%;
+
+      .description {
+        display: block;
+
+        .glass-description {
+          margin-bottom: 0.5rem;
         }
       }
     }
