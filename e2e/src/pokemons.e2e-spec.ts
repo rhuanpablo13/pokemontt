@@ -1,16 +1,22 @@
-import { AppPage } from './app.po';
+import { PokemonPage } from './pokemons.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
-  let page: AppPage;
+describe('workspace-project Pokemons', () => {
+  let page: PokemonPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new PokemonPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display search pokemon', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('pokemont app is running!');
+    browser.pause();
+
+    page.getInputSearch().sendKeys('AZ');
+
+    page.getButtonSearch().click();
+
+    expect(page.getListSearch()).toContain('AZ')
   });
 
   afterEach(async () => {

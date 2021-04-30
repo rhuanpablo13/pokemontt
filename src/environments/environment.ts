@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  API_PATH: 'https://api.pokemontcg.io/v2/'
+  API_KEY: '72ae03f1-45ff-416f-b80d-a86c88877d0e',
+  API_PATH: 'https://api.pokemontcg.io/v2/',
 };
 
 /*
