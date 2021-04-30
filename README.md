@@ -44,7 +44,7 @@
 - Dano
 - Descrição
 
-### 🏆 Aplicação [Demo](https://trophy-front.herokuapp.com/)
+### 🏆 Aplicação [Demo](https://pokemontt.herokuapp.com/)
 
 ### Pré-requisitos
 
