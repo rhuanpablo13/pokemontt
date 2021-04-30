@@ -1,13 +1,20 @@
-<div class="container">
+<div class="container-pokemon">
  <app-search (onSubmit)="onSubmit($event)"></app-search>
-    <ol class="wrapper" id="list-pokemon">
-      <li  [routerLink]="['/pokemon']" [queryParams]="{ id: pokemon.id}" *ngFor="let pokemon of pokemons" class="glass">
-      <img [lazyLoad]="pokemon.images.small" class="img-pokemon-pokemons">
-          <div class="glass-description">
-              <h5>{{'ID' | translate}}: {{pokemon.id}} </h5>
-              <h5>{{'NAME' | translate}}: {{pokemon.name}} </h5>
-              <h5>{{'TYPE' | translate}}: {{pokemon.types}} </h5>
-          </div>
-      </li>
-    </ol>
+  <ol  id="list-pokemon" class="wrapper ">
+    <li  [routerLink]="['/pokemon']" [queryParams]="{ id: pokemon.id}" *ngFor="let pokemon of pokemons" class="glass">
+    <img [lazyLoad]="pokemon.images.small" class="img-pokemon-pokemons">
+        <div class="glass-description">
+            <h5>{{'ID' | translate}}: {{pokemon.id}} </h5>
+            <h5>{{'NAME' | translate}}: {{pokemon.name}} </h5>
+            <h5>{{'TYPE' | translate}}: {{pokemon.types}} </h5>
+        </div>
+    </li>
+  </ol>
+  <owl-carousel-o [options]="customOptions" class="container-mobile">
+    <ng-container *ngFor="let pokemon of [1, 2, 3, 4, 4, 6]">
+      <ng-template carouselSlide [id]="pokemon.id">
+        <img [src]="'/assets/img/card-test.png'" [alt]="'djjfsd,bfmhsbh'" [title]="'dhakshdkuhdk'">
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
 </div>

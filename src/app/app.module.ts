@@ -16,6 +16,8 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { PokemonsComponent } from './pages/pokemons/pokemons.component';
 import { InterceptorModule } from './services/interceptor/interceptor.module'
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http)
@@ -37,6 +39,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     NgbModule,
     InterceptorModule,
+    BrowserAnimationsModule,
+    CarouselModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
