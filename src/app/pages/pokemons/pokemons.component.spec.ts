@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { TranslateService } from '@ngx-translate/core';
 
-fdescribe('PokemonsComponent', () => {
+describe('PokemonsComponent', () => {
   let component: PokemonsComponent;
   let fixture: ComponentFixture<PokemonsComponent>;
   let mockPokemonService: PokemonService;
@@ -64,6 +64,7 @@ fdescribe('PokemonsComponent', () => {
     const list = compiled.querySelector('#list-pokemon');
     
     expect(list.textContent).toContain(pokemonMock.name);
+    expect(list.textContent).toContain(pokemonMock.id);
+    expect(list.textContent).toContain(pokemonMock.types[0]);
   }));
-
 });
