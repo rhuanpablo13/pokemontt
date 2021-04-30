@@ -6,6 +6,10 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ActivatedRoute } from '@angular/router';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { TranslateService } from '@ngx-translate/core';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { SearchComponent } from '../../components/search/search.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('PokemonsComponent', () => {
   let component: PokemonsComponent;
@@ -24,10 +28,14 @@ describe('PokemonsComponent', () => {
   
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PokemonsComponent ],
+      declarations: [ PokemonsComponent, SearchComponent],
       imports: [
         TranslateTestingModule.withTranslations({ pt: require('src/assets/i18n/pt.json'), en: require('src/assets/i18n/en.json') }),
         HttpClientTestingModule ,
+        LazyLoadImageModule,
+        FontAwesomeModule,
+        FormsModule,
+        ReactiveFormsModule
       ],
       providers: [
       {

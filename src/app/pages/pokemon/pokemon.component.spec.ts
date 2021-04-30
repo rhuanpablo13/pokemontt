@@ -8,6 +8,7 @@ import { PokemonComponent } from './pokemon.component';
 import { PokemonService } from '../../services/pokemon.service';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 describe('PokemonComponent', () => {
   let component: PokemonComponent;
@@ -35,6 +36,7 @@ describe('PokemonComponent', () => {
       imports: [
         TranslateTestingModule.withTranslations({ pt: require('src/assets/i18n/pt.json'), en: require('src/assets/i18n/en.json') }),
         HttpClientTestingModule ,
+        LazyLoadImageModule
       ],
       providers: [
       {

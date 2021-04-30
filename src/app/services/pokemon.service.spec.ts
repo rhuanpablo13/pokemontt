@@ -10,7 +10,7 @@ import {
 import { environment } from 'src/environments/environment';
 import { Pokemon } from '../models/pokemon';
 
-fdescribe('PokemonService', () => {
+describe('PokemonService', () => {
   let service: PokemonService;
   const pokemonMock = {
     id: "TEST_ID",
