@@ -1,27 +1,98 @@
-# Pokemont
+<h1 align="center">
+  👾 Pokemont 👾
+</h1>
+<p align="center">🚀 Sistema para exibição das cartas de pokemon desenvolvido com a linguagem angular na versão 9.0.0-rc.0 utilizando uma arquitetura MVC e baseada em componentes Web.
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0-rc.0.
+### Features
 
-## Development server
+- [x] Página com visão em grid na versão desktop;
+- [ ] Página com visão em carrosel na versão mobile, somente das cartas Pokemon;
+- [x] Páginas de detalhes da carta de Pokemon
+- [x] Modal com detalhe do ataque do Pokemon
+- [x] Testes Unitários
+- [ ] Testes E2E
+- [x] Rotas
+- [x] SASS
+- [x] PWA
+- [x] Publicado no Heroku
+- [x] Eslint + Prettier + husky + commitlint
+- [x] Internacionalização
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Página com visão em grid na versão desktop e carrosel na versão mobile, somente das cartas Pokemon:
 
-## Code scaffolding
+- Imagem da carta
+- Nome do Pokemon
+- ID do Pokemon
+- Tipo(s)
+- Ao interagir redirecionar para a tela de detalhes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Páginas de detalhes da carta de Pokemon:
 
-## Build
+- Imagem
+- Nome
+- ID do Pokemon
+- Tipo(s)
+- Resistencia(s)
+- Fraqueza(s)
+- Lista de nomes dos ataques do pokemon ao clicar exibir a modal de detalhe
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Modal com detalhe do ataque do Pokemon com:
 
-## Running unit tests
+- Custo de “mana”
+- Nome
+- Dano
+- Descrição
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 🏆 Aplicação [Demo](https://trophy-front.herokuapp.com/)
 
-## Running end-to-end tests
+### Pré-requisitos
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js - v14.16.1](https://nodejs.org/en/), [Angular CLI](https://github.com/angular/angular-cli) versão 9.0.0-rc.0.
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-## Further help
+### 🎲 Rodando o Front
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+# Clone este repositório
+$ git clone git@github.com:isa-desenvolvimento/pokemont.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd pokemont
+
+# Instale as dependências - como está configurado no heroku o npm
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ ng serve
+
+# O servidor inciará na porta:4200 - acesse <http://localhost:4200>
+
+# Execute os testes unitários
+$ ng test
+
+# Execute os testes de integração
+$ ng e2e
+
+# Execute o build para pwa
+$ ng build --prod
+$ cd dist/pokemont
+$ http-server -o
+
+# O servidor inciará na porta:8081 - acesse <http://127.0.0.1:8081>
+
+```
+
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Angular 9](https://angular.io/cli/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Protector](https://www.protractortest.org/)
+- [Jasmine](https://jasmine.github.io/)
+- [Karma](https://karma-runner.github.io)
+- [Commitlint](https://commitlint.js.org/)
+- [Husky](https://www.husky.com.br/)
+- [Travis CI](https://travis-ci.com/)
