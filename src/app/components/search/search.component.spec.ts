@@ -4,14 +4,11 @@ import { TranslateTestingModule } from 'ngx-translate-testing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 import { SearchComponent } from './search.component';
 
-
-fdescribe('SearchComponent', () => {
+describe('SearchComponent', () => {
   let component: SearchComponent;
   let fixture: ComponentFixture<SearchComponent>;
-
   
   beforeEach(async(() => {
     TestBed.configureTestingModule({
