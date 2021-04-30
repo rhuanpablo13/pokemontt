@@ -7,7 +7,7 @@
 ### Features
 
 - [x] Página com visão em grid na versão desktop;
-- [ ] Página com visão em carrosel na versão mobile, somente das cartas Pokemon;
+- [x] Página com visão em carrosel na versão mobile, somente das cartas Pokemon;
 - [x] Páginas de detalhes da carta de Pokemon
 - [x] Modal com detalhe do ataque do Pokemon
 - [x] Testes Unitários
