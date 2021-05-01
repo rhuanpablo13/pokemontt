@@ -8,7 +8,6 @@
     "test": "ng test",
     "lint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod",
     "heroku-postbuild": "ng build --prod"
   },
   "engines": {
@@ -18,12 +17,9 @@
   "private": true,
   "dependencies": {
     "@angular-devkit/architect": "^0.1001.7",
-    "@angular-devkit/build-angular": "~0.1100.4",
     "@angular/animations": "~9.0.0-rc.0",
-    "@angular/cli": "^11.0.4",
     "@angular/common": "~9.0.0-rc.0",
     "@angular/compiler": "~9.0.0-rc.0",
-    "@angular/compiler-cli": "^11.0.4",
     "@angular/core": "~9.0.0-rc.0",
     "@angular/forms": "^9.0.7",
     "@angular/localize": "^9.1.13",
@@ -45,12 +41,14 @@
     "font-awesome": "^4.7.0",
     "ng-lazyload-image": "^9.1.0",
     "ngx-owl-carousel-o": "^5.0.0",
-    "path": "^0.12.7",
     "rxjs": "^6.6.7",
     "sass": "^1.32.11",
     "tslib": "^1.10.0",
+    "zone.js": "~0.10.2",
+    "@angular/cli": "^11.0.4",
+    "@angular/compiler-cli": "^11.0.4",
     "typescript": "~4.0.2",
-    "zone.js": "~0.10.2"
+    "@angular-devkit/build-angular": "~0.1100.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.900.0-rc.0",
