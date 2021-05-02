@@ -1,20 +1,16 @@
 language: node_js
 node_js:
-  - "v14.15.3"
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.22.10
-  - export PATH="$HOME/.yarn/bin:$PATH"
-install: yarn
-cache:
-  yarn: true
-  directories:
-    - node_modules
+  - "11.0"
+branches:
+  only:
+    - master
+before_script:
+  - npm install -g @angular/cli
 script:
-  - yarn run build
+  - npm install
+  - npm run build
 deploy:
-  provider: pages
-  local-dir: dist/
-  github-token: $GITHUB_TOKEN  
-  keep-history: false
-  on:
-    branch: heroku
+  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: ""
